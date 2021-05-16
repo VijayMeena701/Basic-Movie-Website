@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ZeusHunter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="imageedit_1_8135409332.png">
+        <link rel="stylesheet" href="indexStyle.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<!--        <script>$(window).scroll(function() { parallaxEffect(); })</script>-->
+    </head>
+    <body>
+        <div class="backgroundBackdrop">
+            <div class="backDropContainer">
+                <header class="desktopView MobileView">
+                    <div class="headerContainer">
+                        <div class="logoImg">
+                            <img src="imageedit_1_8135409332.png">
+                            <div>LO<span>G</span>O</div>
+                        </div>
+                        <div class="menu">
+                            <nav class="mobileView" id="dropDownMenu">
+                                <ul>
+                                    <li><a id="mobileMenuToggle" href="javascript:void(0)">
+                                            <div class="bar"></div>
+                                            <div class="bar"></div>
+                                            <div class="bar"></div>
+                                        </a></li>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Films</a></li>
+                                    <li><a href="#">MyList</a></li>
+                                    <li><a href="#">People</a></li>
+                                </ul>
+                                <div class="cntr">
+                                    <div class="cntr-innr">
+                                      <label class="search" for="inpt_search">
+                                            <input id="inpt_search" type="text" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $("#inpt_search").on('focus', function () {
+                                        $(this).parent('label').addClass('active');
+                                    });
+
+                                    $("#inpt_search").on('blur', function () {
+                                        if($(this).val().length == 0)
+                                            $(this).parent('label').removeClass('active');
+                                    });
+                                </script>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <div class="backDropShadow">
+                    <div class="backDropContents">
+                        <div>
+                            <h3>Track Movie's, Films, T.V.Series, Web-Series, etc that you've watched.<br>All at one Place.</h3>
+                        </div>
+                        <div class="getStartedButton">
+                            <a href="#">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tagLine">
+            <h2> A Social Network to connect with Movie lovers. Also Available on <i class="fa fa-apple"></i> <i class="fa fa-android"></i> </h2>
+        </div>
+        <script type="text/javascript" src="javaScript.js"></script>
+        <section>
+            <div class="movieCardsContainer">
+                <div class="cardsContainer" style="background-image: url(IO-poster-1.jpg);">
+                    <div>
+                        <ul>
+                            <li><i class="fa fa-eye" aria-hidden="true"></i></li>
+                            <li class="text">Views: 5000 </li>
+                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+                            <li class="text">Likes: 2000 </li>
+                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            <li class="text">Rating: 3.6/5 </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cardsContainer" style="background-image: url(IO-poster-1.jpg);">
+                    <div>
+                        <ul>
+                            <li><i class="fa fa-eye" aria-hidden="true"></i></li>
+                            <li class="text">Views: </li>
+                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+                            <li class="text">Likes: </li>
+                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            <li class="text">Rating: </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cardsContainer" style="background-image: url(IO-poster-1.jpg);">
+                    <div>
+                        <ul>
+                            <li><i class="fa fa-eye" aria-hidden="true"></i></li>
+                            <li class="text">Views: </li>
+                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+                            <li class="text">Likes: </li>
+                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            <li class="text">Rating: </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

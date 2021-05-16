@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #2c3440;
+    background-image: linear-gradient(180deg,#14181c 0,#14181c 250px,#2c3440 251px);
+    overflow-x: hidden;
+    z-index: 0;
+    height: 200vh;
+    width: 100%;
+}
+.backgroundBackdrop {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.backgroundBackdrop .backDropContainer {
+    height:100%;
+    width: 100%;
+    background: radial-gradient( rgba(0,0,0,0.005), rgba(0,0,0,0.05), rgba(0,0,0,0.5) , rgba(0,0,0,0.9), rgba(0,0,0,1));
+}
+.backgroundBackdrop .backDropContainer .backDropShadow {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95),rgba(0,0,0,0.7),rgba(0,0,0,0.4),rgba(0,0,0,0.1),rgba(0,0,0,0) 400px);
+}
+.backgroundBackdrop .backDropContainer .backDropShadow .backDropContents {
+    position: relative;
+    width: 92%;
+    margin: 0 auto;
+    top: 60%;
+    text-align: center;
+    z-index: 0;
+}
+.backgroundBackdrop .backDropContainer .backDropShadow .backDropContents  h3 {
+    color: #fff;
+    font-size: 36px;
+    line-height: 1em;
+}
+.backgroundBackdrop .backDropContainer .backDropShadow .backDropContents .getStartedButton {
+    width: 250px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #1a6900;
+}
+.backDropContents .getStartedButton a {
+    text-align: center;
+    text-decoration: none;
+    color: #d8e0e8;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+.tagLine {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 10px, rgba(20,24,28,1) 30px,rgba(20,24,28,1) 50px);
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tagLine h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    color: #9ab;
+    font-family: sans-serif;
+}
+.tagLine .fa {
+    font-size: 30px;
+}
+
+/*  Nav Bar Stylinngs. */
+header {
+    display: block;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.05));
+    opacity: 0.7;
+    transition: 200ms;
+    z-index: 600;
+}
+header:hover{
+    opacity: 1;
+}
+.headerContainer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.logoImg {
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+}
+.logoImg img {
+    width: 100px;
+    height: 100%;
+}
+.logoImg div {
+    display: flex;
+    color: #999;
+    font-size: 36px;
+    letter-spacing: 12px;
+    font-weight: 800;
+    font-family: monospace;
+}
+.headerContainer .menu {
+    margin: auto;
+}
+.headerContainer .menu nav {
+    display: flex;
+}
+.headerContainer .menu nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerContainer .menu nav ul li {
+    list-style: none;
+    padding: 10px 20px;
+}
+.headerContainer .menu nav ul li:nth-last-child(5) {
+    display: none;
+}
+.headerContainer .menu nav ul li a{
+    text-decoration: none;
+    color: #9ab;
+    text-transform: uppercase;
+    font-family: Graphik-Semibold-Web, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.headerContainer .menu nav ul li a div.bar {
+    width: 15px;
+    height: 2px;
+    margin: 3px 0;
+    background: #fff;
+    transition: 0.5s;
+}
+.headerContainer .menu nav ul li a:hover {
+    color: #d8e0e8;
+}
+
+/* Search Bar */
+.menu nav.mobileView .cntr{
+    display:table;
+    width:100%;
+    height:100%;
+}
+.cntr-innr{
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+    transform: scale(0.8);
+}
+/*** Search Bar STYLES ***/
+.search {
+	display: inline-block;
+	position: relative;
+	height: 35px;
+	width: 35px;
+	box-sizing: border-box;
+	margin: 0px 8px 7px 0px;
+	padding: 7px 9px 0px 9px;
+	border: 3px solid #d8e0e8;
+	border-radius: 25px;
+	transition: all 200ms ease;
+	cursor: text;
+}
+.search:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    right: -5px;
+    top: 21px;
+    background: #d8e0e8;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+    transition: all 200ms ease;
+}
+.search.active,
+.search:hover {
+    width: 200px;
+    margin-right: 0px;
+    border-color: #fff;
+}
+.search.active:after {
+    height: 0px;	
+}
+#inpt_search {
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #d8e0e8;
+    background: transparent;
+    outline-width: 0px;
+}
+
+/* Section 2*/
+.movieCardsContainer {
+    display: flex;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    height: auto;
+    padding: 20px 0;
+    justify-content: space-around;
+    align-items: center;
+}
+.cardsContainer {
+    width: 200px;
+    border: 2px solid #ddd;
+    height: 300px;
+    border-radius: 5px;
+    border-color: rgba(20,24,28,0.6);
+    z-index: 5;
+    background-size: contain;
+}
+.cardsContainer div {
+    width: 90%;
+    height: 90%;
+    justify-self: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    z-index: 6;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.85);
+    opacity: 0;
+    transition: 300ms;
+}
+.cardsContainer div:hover {
+    opacity: 1;
+}
+.cardsContainer div ul {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.cardsContainer div ul li {
+    list-style: none;
+    text-align: center;
+}
+.cardsContainer div ul li .fa {
+    font-size: 26px;
+    color: #9aa;
+}
+.cardsContainer div ul li .fa.fa-eye {
+    color: rgba(25,150,75,0.8);
+}
+.cardsContainer div ul li .fa.fa-heart {
+    color: rgba(225,60,25,0.8);
+}
+.cardsContainer div ul li .fa.fa-star {
+    color: rgba(100,50,175,0.8);
+}
+.cardsContainer div ul li.text {
+    color: rgba(218, 218, 232,0.8);
+    font-family: 'Sen', sans-serif;
+}
+@media only screen and (max-width:990px) {
+    .logoImg {
+        width: 100%;
+    }
+    .headerContainer .menu {
+        width: 100%;
+        z-index: 999;
+    }
+    .headerContainer .menu nav {
+        display: block;
+        margin: 0 auto;
+        z-index: 999;
+    }
+    .headerContainer .menu {
+        background: rgba(0,0,0,0.9);
+    }
+    .headerContainer .menu nav ul li:nth-last-child(5) {
+        display: block;
+        float: right;
+    }
+    .headerContainer .menu nav ul li:not(:nth-last-child(5)) {
+        display: none;
+    }
+    .menu nav.mobileView .cntr {
+        display: none;
+    }
+    .menu nav.mobileView.active .cntr {
+        display: flex;
+        justify-content: center;
+    }
+    .menu nav.mobileView.active .cntr .cntr-innr {
+       display: block; 
+    }
+    
+/*    animating the Toggle Menu bar Button  */
+    .headerContainer .menu nav.mobileView.active ul li a div.bar:nth-child(1) {
+        position: absolute;
+        transform: rotate(135deg);
+        margin-top: 2.9px;
+        z-index: 10;
+    }
+    .headerContainer .menu nav.mobileView.active ul li a div.bar:nth-child(3) {
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: 20;
+        margin-top: -2.9px;
+    }
+    .headerContainer .menu nav.mobileView.active ul li a div.bar:nth-child(2) {
+        transform: rotate(305deg);
+        opacity: 0;
+        z-index: 0;
+    }
+    
+    
+    .headerContainer {
+        display: block;
+    }
+    .headerContainer .menu nav.mobileView.active ul {
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+    }
+    .headerContainer .menu nav.mobileView.active ul li:not(:nth-child(1)) {
+        transform: translateX(-1000px);
+        opacity: 0;
+        transition: 1s;
+        display: block;
+        z-index: 999;
+        animation: bringit 1s ease-in-out;
+    }
+    .headerContainer .menu nav.mobileView.active ul li:nth-child(2) {
+        opacity: 1;
+        transform: translateX(0);
+        animation-delay: 0s;
+    }
+    .headerContainer .menu nav.mobileView.active ul li:nth-child(3) {
+        transform: translateX(0);
+        opacity: 1;
+        animation-delay: 0.2s;
+    }
+    .headerContainer .menu nav.mobileView.active ul li:nth-child(4) {
+        transform: translateX(0);
+        opacity: 1;
+        animation-delay: 0.6s;
+    }
+    .headerContainer .menu nav.mobileView.active ul li:nth-child(5) {
+        transform: translateX(0);
+        opacity: 1;
+        animation-delay: 0.8s;
+    }
+    @keyframes bringit {
+        0% {
+            transform: translate(-1000px);
+        }
+        75% {
+            transform: translate(100px);
+        }
+        100% {
+            transform: translate(0);
+        }
+    }
+}
